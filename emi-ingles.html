@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar's Homework Adventure</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00796b; /* Verde sólido */
+            color: white;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #ffffff; /* Fondo blanco para contraste */
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            text-align: left; /* Alineación de texto hacia la izquierda para un estilo más dinámico */
+            color: #004d40; /* Texto en verde oscuro */
+            width: 100%;
+        }
+        h1, h2 {
+            color: #0288d1; /* Detalles azules */
+        }
+        .exercise {
+            background-color: #0288d1; /* Fondo azul para los ejercicios */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: white;
+        }
+        .input-exercise {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-exercise p {
+            margin: 5px 0;
+        }
+        button {
+            background-color: #0288d1; /* Azul sólido */
+            padding: 12px 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #01579b; /* Azul más oscuro al hacer hover */
+        }
+        .answer {
+            background-color: #388e3c; /* Verde brillante para respuestas correctas */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .incorrect {
+            background-color: #d32f2f; /* Rojo para respuestas incorrectas */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        li {
+            background-color: #0288d1; /* Azul de fondo para los miembros */
+            color: white;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 6px;
+        }
+        .summary {
+            background-color: #e0f7fa; /* Fondo azul claro para el resumen */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Oscar's Homework Adventure</h1>
+    <h2>Story</h2>
+    <p>Oscar asked his mom for permission for his friends, Mónica, Axel, Dylan, Evelyn, and Anna, to do the homework they had left him at home yesterday. His mom said yes, but first he had to wash the dishes and eat the quesadilla she had prepared for him. Oscar, without any problem, complied with the conditions his mom proposed. After that, his friends arrived at 12:00 PM to do their homework, which was to do a report on playing soccer and then do another art assignment based on writing a song.</p>
+    <p>In the soccer report, Axel and Dylan already had experience, since Axel had played last year and Dylan had been playing for two years. After finishing their homework, their mother prepared dinner, and they all ate happily.</p>
+    
+    <h2>Interactive Exercise 1: Multiple Choice</h2>
+    <div class="exercise">
+        <div class="input-exercise">
+            <p>1. What did Oscar have to do before his friends arrived?</p>
+            <input type="radio" name="q1" value="a"> a) Clean the house<br>
+            <input type="radio" name="q1" value="b"> b) Wash the dishes and eat the quesadilla<br>
+            <input type="radio" name="q1" value="c"> c) Do his own homework<br>
+        </div>
+        
+        <button onclick="checkAnswers()">Submit Answers</button>
+        <p id="results"></p>
+    </div>
+
+    <h2>Interactive Exercise 2: Fill in the Blanks</h2>
+    <div class="exercise">
+        <div class="input-exercise">
+            <p>Oscar’s friends helped him with a <input type="text" id="blank1" placeholder="Enter here"> on playing soccer.</p>
+            <p>After the homework, they all ate <input type="text" id="blank2" placeholder="Enter here"> together.</p>
+        </div>
+        <button onclick="checkBlanks()">Check Answers</button>
+        <p id="blankResults"></p>
+    </div>
+
+    <h2>Team Members</h2>
+    <ul>
+        <li>López Noriega Gildardo Andrés</li>
+        <li>Vega Jicobamea Angel Saúl</li>
+        <li>Sánchez Antúnez Bruno</li>
+        <li>Castro Navarro Jesús Alexander</li>
+        <li>Zamora Castillo Abel</li>
+        <li>Rodríguez Félix Emiliano</li>
+        <li>Sarabia Nuñez Axel</li>
+    </ul>
+
+    <h2>Professor and Course Details</h2>
+    <p><strong>Professor:</strong> Moises Galaz</p>
+    <p><strong>Subject:</strong> English II</p>
+    <p><strong>Group/Shift:</strong> 204-M</p>
+
+    <!-- Resumen de Gramática Inglesa -->
+    <div class="summary">
+        <h3>English Grammar Concepts</h3>
+        <p>English grammar consists of rules that govern how words and sentences are structured in the English language. Some of the fundamental concepts include parts of speech, tenses, subject-verb agreement, and sentence structure. Parts of speech include nouns, pronouns, verbs, adjectives, and adverbs. Understanding how each of these works in a sentence is key to mastering English grammar.</p>
+        <p>Another critical aspect is the use of tenses, which indicate the time of action in a sentence. There are three main tenses in English: past, present, and future, each with various forms. Subject-verb agreement ensures that the subject and verb in a sentence match in number, which is essential for clear communication.</p>
+        <p>Sentence structure refers to the arrangement of words in a sentence. Simple, compound, and complex sentences help convey different ideas and relationships between clauses. Proper punctuation also plays a significant role in ensuring clarity in written English.</p>
+        <p>Lastly, understanding and using articles (a, an, the), prepositions (in, on, at), and conjunctions (and, but, or) correctly is crucial for building grammatically correct sentences. Mastery of these concepts enables effective and precise communication in English.</p>
+    </div>
+</div>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+        let q1 = document.querySelector('input[name="q1"]:checked');
+
+        if (q1 && q1.value === "b") {
+            score++;
+        }
+
+        document.getElementById("results").innerText = "Score: " + score + "/1";
+    }
+
+    function checkBlanks() {
+        let blank1 = document.getElementById("blank1").value.toLowerCase();
+        let blank2 = document.getElementById("blank2").value.toLowerCase();
+        let correct1 = "report";
+        let correct2 = "dinner";
+
+        let score = 0;
+        if (blank1 === correct1) score++;
+        if (blank2 === correct2) score++;
+
+        document.getElementById("blankResults").innerText = "Score: " + score + "/2";
+    }
+</script>
+
+</body>
+</html>
